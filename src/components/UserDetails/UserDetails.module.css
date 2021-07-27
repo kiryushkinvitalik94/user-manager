@@ -1,0 +1,14 @@
+.infoLabel {
+  font-size: 18px;
+  color: grey;
+}
+.infoText {
+  font-size: 25px;
+  font-weight: bold;
+}
+.infoItem {
+  margin-top: 10px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}

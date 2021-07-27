@@ -1,0 +1,28 @@
+.userList {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.userList li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.userListSelect {
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+}
+
+@media screen and (min-width: 700px) {
+  .userList {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .userList li {
+    display: flex;
+    justify-content: center;
+  }
+}
