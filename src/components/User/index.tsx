@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { selectUserByuuid } from "../../features/users/usersSlice";
+import { selectUserByuuid } from "../../reducers/users/usersSlice";
 import {
   deleteUserAsync,
   updateUserAsync,
-} from "../../features/user/userSlice";
+} from "../../reducers/user/userSlice";
 import { User } from "../../interfaces/User";
 import UserDetails from "../UserDetails";
 import UserForm from "../UserForm";
@@ -54,7 +54,7 @@ export default function UserComponent() {
     <>
       <div className={styles.userContainer}>
         <div className={styles.userIconContainer}>
-          <img src={user.picture.large} />
+          <img alt="user icon" src={user.picture.large} />
         </div>
         {isEditMode ? (
           <UserForm user={user} handlerOnFormSubmit={handlerOnFormSubmit} />

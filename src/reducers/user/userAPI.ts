@@ -4,7 +4,12 @@ export function fetchUserWithId(uuid: string) {
   return fetch(`https://randomuser.me/api/?uuid=${uuid}`);
 }
 export function deleteUserWithId(uuid: string) {
-  return fetch(`https://randomuser.me/api/?uuid=${uuid}`, { method: "DELETE" });
+  return fetch(`https://randomuser.me/api/?uuid=${uuid}`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
 }
 export function updateUserWithId(userData: User) {
   return fetch(`https://randomuser.me/api/?uuid=${userData.login.uuid}`, {

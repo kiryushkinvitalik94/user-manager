@@ -9,7 +9,7 @@ type propsType = {
   popupText?: string;
 };
 
-export default function popup(props: propsType) {
+export default function Popup(props: propsType) {
   const {
     btnApplyText,
     btnCancelText,
@@ -17,8 +17,6 @@ export default function popup(props: propsType) {
     handlerOnbtnCancellClick,
     popupText,
   } = props;
-
-  console.log(btnApplyText);
 
   return (
     <div className={styles.popWrapper}>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { getUsersAsync, selectUsers } from "../../features/users/usersSlice";
+import { getUsersAsync, selectUsers } from "../../reducers/users/usersSlice";
 import UserListItem from "../UserListItem";
 import { User } from "../../interfaces/User";
 
@@ -14,7 +14,7 @@ export default function UsersList() {
 
   useEffect(() => {
     dispatch(getUsersAsync(10));
-  }, []);
+  }, [dispatch]);
 
   const [genderFilter, setGenderFilter] = useState("all");
   const [filteredUsers, setFilteredUsers] = useState(users);
