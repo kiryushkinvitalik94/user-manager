@@ -4,6 +4,7 @@ import styles from "./UserListItem.module.css";
 
 export default function UserListItem(props: { user: User }) {
   const { user } = props;
+
   return (
     <div className={styles.container}>
       <div className={styles.userIcon}>

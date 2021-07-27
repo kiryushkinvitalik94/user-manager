@@ -46,6 +46,10 @@ export default function UserComponent() {
     history.push("/");
   };
 
+  const handlerOnReturnClick = () => {
+    history.push("/");
+  };
+
   if (!user) {
     return <div className={styles.userNotFound}>User not found!!!</div>;
   }
@@ -75,6 +79,9 @@ export default function UserComponent() {
             className={styles.btnInfo}
           >
             {!isEditMode ? "edit" : "cancel"}
+          </button>
+          <button onClick={handlerOnReturnClick} className={styles.btnInfo}>
+            return
           </button>
         </div>
       </div>

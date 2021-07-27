@@ -39,6 +39,10 @@ export default function UsersList() {
     setGenderFilter(e.target.value);
   };
 
+  if (!users) {
+    <div>Loading...</div>;
+  }
+
   return (
     <div>
       <div className={styles.userListSelect}>
